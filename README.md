@@ -1,4 +1,4 @@
-# Culculator
+# Culculator https://rvashgh.github.io/Culculator/calc/
 This is my project, that I created just to practice in JavaScript and CSS.
 
 ## TODO
