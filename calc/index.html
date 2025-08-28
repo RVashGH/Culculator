@@ -6,27 +6,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mozilla+Headline:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="calc.ico">
     <title>Culculator</title>
 </head>
 <body>
     <div class="container">
-        <h1>Кулькулятор ёпт</h1>
-        <input class="input" id="firstInput" type="number" placeholder="123">
-        <select name="" id="select">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">×</option>
-            <option value="divide">÷</option>
-        </select>
-        <input class="input" id="secondInput" type="number" placeholder="2314">
+        <!-- <h1>Кулькулятор ёпт</h1> -->
+        <img id="logo" src="logo.png" alt="Culculator">
+        <p class="desc" style="display: none;">Это мой проект, который я создавал для улучшения своих навыков CSS и JS. Но, в последствии проект перерос в какую-то полную ху...</p>
+        <button class="backbtn" style="display: none;">Назад</button>
+        <p class="err-one">❌ Введите числа в поля</p>
+        <input class="input" id="firstInput" type="number" placeholder="Первое число">
+        <div class="selects">
+            <select name="" id="select">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+                <option value="power">^</option>
+                <option value="sqrt">√</option>
+                <option value="sqr">sqr</option>
+                <option value="nrt">n^√x</option>
+                <option value="sin">sin(n)</option>
+                <option value="cos">cos(n)</option>
+                <option value="tg">tan(n)</option>
+            </select>
+            <select name="" id="ms">
+                <option value="deg">DEG (°)</option>
+                <option value="rad">RAD (π/n)</option>
+            </select>
+        </div>
+        
+        <input class="input" id="secondInput" type="number" placeholder="Второе число">
         <button class="equals">=</button>
         <p class="result" id="result" style="display: none;">1</p>
-        <button class="copy" style="display: none;">Скопировать</button>
+        <p id="copy" style="display: none;">
+            клик чтобы скопировать
+        </p>
         <div class="footer">
-            <h3 id="by">by <a href="https://github.com/RVashGH">@RVashGH</a></h3>
-            <h3 id="ver">Версия: 0.2</h3>
+            <h3 id="by">by <a target="_blank" id="ghlink" href="https://github.com/RVashGH">@RVashGH</a></h3>
+            <h3 id="repo"><a target="_blank" id="repo2" href="https://github.com/RVashGH/Culculator">open project repo</a></h3>
+            <h3 id="ver">Версия: 0.3</h3>
         </div>
     </div>
 

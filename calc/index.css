@@ -1,48 +1,82 @@
 body {
     height: 100vh;
-    background: linear-gradient(#f1f1f1, #808080);
+    background: linear-gradient(#9adfff, #6686ab);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
 }
+
+/* .copy-popup {
+    padding: 2px 10px;
+    background-color: limegreen;
+    border-radius: 10px;
+    position: sticky;
+} */
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid hsla(0, 0%, 20%, 0.3);
+    border-radius: 10px;
+    background: linear-gradient(#b6dee3, #7a9ea3, #b6dee3);
+    box-shadow: 0 0 20px grey;
+    transition: .5s;
 }
 
 .input {
     margin: 10px;
-    padding: 10px;
-    font-size: 2rem;
+    padding: 15px 10px;
+    font-size: 1rem;
     border: 4px solid hsla(0, 0%, 20%, 0.3);
     border-radius: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     width: 250px;
     box-shadow: 0 0 20px black;
+    transition: .5s;
 }
 
 .input:focus, .input:hover {
-    border: 4px solid black;
+    border: 4px solid rgb(100, 100, 100);
+    /* font-size: 1.1rem; */
+    /* margin-left: 15px; */
+    margin-top: 15px;
 }
 
-#select {
+select {
     border: 4px solid hsla(0, 0%, 20%, 0.3);
     border-radius: 10px;
     padding: 5px;
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     background-color: white;
     text-align: center;
     cursor: pointer;
     box-shadow: 0 0 10px black;
+    transition: .5s;
+    font-family: sans-serif;
+    font-weight: 500;
+    min-width: 131px;
+}
+
+select:hover {
+    border: 4px solid rgb(100, 100, 100);
+    font-size: 1.25rem;
+}
+
+#select, #ms {
+    font-family: 'Inter', sans-serif;
 }
 
 #select:hover {
-    border: 4px solid black;
+    font-size: 1.5rem;
+}
+
+option {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -51,17 +85,21 @@ button {
     padding: 5px 15px;
     background-color: white;
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     cursor: pointer;
     box-shadow: 0 0 10px black;
+    transition: .5s;
+    font-family: sans-serif;
+    font-weight: 700;
 }
 
 button:hover {
-    border: 4px solid black;
+    border: 4px solid rgb(100, 100, 100);
+    font-size: 1.5rem;
 }
 
 .result {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     background-color: white;
     padding: 10px 50px;
     border: 4px solid hsla(0, 0%, 20%, 0.3);
@@ -69,12 +107,49 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 0;
     box-shadow: 0 0 20px black;
+    transition: .5s;
+    cursor: pointer;
     /* width: 200px;
     text-align: center; */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.copy {
+.result:hover {
+    border: 4px solid rgb(100, 100, 100);
+    /* font-size: 1.6rem; */
+    /* margin-left: 15px; */
+    margin-top: 15px;
+}
+
+#copy {
     margin-top: 10px;
+    color: white;
+    transition: .5s;
+    border-radius: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    align-items: center;
+}
+
+#copy:hover {
+    color: black;
+    font-size: 0.8rem;
+    
+}
+
+.copied {
+    background-color: lime;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.75rem;
+    transition: .5s;
+}
+
+.copied:hover {
+    font-size: 0.9rem;
 }
 
 .footer {
@@ -83,15 +158,98 @@ button:hover {
     text-shadow: 0 0 20px black;
 }
 
-#by {
+#by, #ver {
     font-weight: 500;
+    transition: .5s;
+    font-size: 0.9rem;
 }
 
-#ver {
-    font-weight: 500;
+#ghlink {
+    text-decoration: none;
+    color: lightblue;
+    transition: .5s;
 }
 
-h1 {
+#ghlink:hover {
+    color: blue;
+}
+
+#by:hover, #ver:hover {
+    color: black;
+    font-size: 1rem;
+}
+
+/* h1 {
     text-shadow: 0 0 30px black;
     color: white;
+    transition: .5s;
+    font-weight: 800;
+}
+
+h1:hover {
+    color: black;
+    font-size: 2.25rem;
+} */
+
+img {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+img:hover {
+    width: 350px;
+}
+
+
+
+.err-one {
+    display: none;
+    color: white;
+    transition: .5s;
+    text-shadow: 0 0 20px black;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.err-two {
+    display: flex;
+    transition: .5s;
+    text-align: center;
+}
+
+.err-one:hover {
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.backbtn {
+    font-family: 'Press Start 2P', sans-serif;
+    margin-bottom: 20px;
+}
+
+.desc {
+    width: 300px;
+    text-align: center;
+    color: white;
+    line-height: 32px;
+}
+
+#repo2 {
+    font-weight: 500;
+    transition: .5s;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+}
+
+#repo2:hover {
+    font-size: 1rem;
+    color: blue;
 }
